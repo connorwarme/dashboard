@@ -116,7 +116,11 @@
 .empty {
 }
 .container {
-    grid-column: 2/3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+.cardContainer {
+    grid-column: 1/2;
     background-color: azure;
     width: 90%;
     max-width: 1240px;
@@ -129,7 +133,7 @@
     gap: clamp(1%, 15px, 2%); */
 }
 @media only screen and (min-width: 750px) {
-    .container {
+    .cardContainer {
         grid-template-columns: 1fr 1fr;
     }
     .item1 {
@@ -137,7 +141,7 @@
     }
 }
 @media only screen and (min-width: 1200px) {
-    .container {
+    .cardContainer {
         grid-template-columns: repeat(4, 1fr);
     }
     .item2 {
