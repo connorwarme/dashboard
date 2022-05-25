@@ -286,6 +286,33 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: .05em;
     margin: 2em 0 0 0;
 }
+/* .wrapper {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    display: flex;
+    justify-content: space-between;
+} */
+.wrapper2 {
+    display: flex;
+    justify-content: flex-end;
+}
+.userActions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.actionbtn {
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.25s ease-in-out;
+}
+.actionbtn:hover {
+    transform: scale(1.5);
+}
 .sideContainer {
     display: grid;
     grid-template-rows: 0.25fr 1fr 1fr 1fr 1fr 2fr;
