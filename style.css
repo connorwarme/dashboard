@@ -1,6 +1,13 @@
+* {
+    font-family: "Roboto Slab", Raleway, Georgia, 'Times New Roman', Times, serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
 .main {
     display: grid;
-    grid-template-columns: 1fr 5fr;
+    grid-template-columns: 1fr 6fr;
 }
 .header {
     grid-column: 2/3;
@@ -10,26 +17,50 @@
     grid-template-rows: 0.5fr 1fr;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 5px 5px lightgrey;
+    box-shadow: 0px 5px 5px #95AFBA;
     margin-bottom: 20px;
 }
 .search {
     display: flex;
     align-items: center;
+    margin-left: 5%;
 }
 .searchbtn {
-    height: 25px;
-    width: 5%;
+    height: 40px;
+    width: 7.5%;
+    padding-left: 5%;
     background-color: white;
     border: none;
 }
+.searchimg {
+    height: 30px;
+    width: auto;
+    position: relative;
+    right: 20px;
+    top: 2.5px;
+}
+.searchimg:hover,
+.searchbtn:hover {
+    cursor: pointer;
+}
 .searchBar {
+    flex: 1;
+    display: flex;
+}
+#search {
     height: 30px;
     min-width: 100px;
-    background-color: lightgrey;
+    background-color: rgba(149, 175, 186, 0.3);
+    border: none;
     border-radius: 10px;
     flex: 1;
-    margin: 0 5% 0 5%;
+    transition: height 0.5s ease-in-out;
+}
+#search:hover {
+    height: 40px;
+}
+#search:focus {
+    padding: 7.5px;
 }
 .dashProfile {
     display: grid;
@@ -38,10 +69,22 @@
     margin-left: 25%;
 }
 .alertsbtn {
-    height: 25px;
-    width: 10%;
+    height: 40px;
+    width: auto;
     background-color: white;
     border: none;
+    margin-right: 20px;
+}
+.alertsimg {
+    height: 25px;
+    width: auto;
+    padding-left: 10px;
+    position: relative;
+    right: 5px;
+}
+.alertsbtn:hover,
+.alertsimg:hover {
+    cursor: pointer;
 }
 .profilePic {
     background-image: url('images/Warme-10.jpg');
@@ -68,15 +111,13 @@
     display: inline-block;
     width: 75px;
     height: 75px;
+    margin: 0 2.5% 0 5.5%;
 }
 .text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-}
-.hi {
-    font-size: small;
 }
 .name {
     font-size: large;
@@ -86,22 +127,28 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
-    margin-left: 15%;
+    margin-left: 5%;
 }
 .buttons > button {
     color: white;
-    background-color: rgb(94, 94, 250);
+    font-weight: 600;
+    background-color: #3F7CAC;
     border: none;
     border-radius: 25px;
-    height: 35px;
-    width: 75px;
+    height: 40px;
+    width: 90px;
     padding: 0;
     margin: 0;
+    transition: transform .25s ease-in-out;
+}
+.buttons > button:hover {
+    transform: scale(1.15);
 }
 .welcome {
+    padding: 1% 0 1% 0;
 }
 .sidebar {
-    background-color: forestgreen;
+    background-color: #3F7CAC;
     grid-column: 1/2;
     grid-row: 1/4;
     display: grid;
@@ -109,9 +156,42 @@
 }
 .options {
     display: grid;
-    grid-template-rows: repeat(auto-fit, minmax(35px, 1fr));
-    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 55px);
+    justify-content: start;
     align-items: center;
+}
+.options > div {
+    display: flex;
+}
+.options > div > button {
+    min-height: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #3F7CAC;
+    border: none;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.dashboard .btn {
+    font-size: 20px;
+}
+.dashboard > img {
+    height: 40px;
+    margin: 0 -8px 0 -8px;
+}
+#icon {
+    padding: 5px 20px 5px 20px;
+    filter:invert(100%);
+}
+.btn:hover,
+.btn:hover #icon {
+    filter: none;
+    color: black;
 }
 .empty {
 }
@@ -121,7 +201,7 @@
 }
 .cardContainer {
     grid-column: 1/2;
-    background-color: azure;
+    background-color: white;
     width: 90%;
     max-width: 1240px;
     margin: 0 auto;
@@ -149,10 +229,10 @@
     }
 }
 .card {
-    background: whitesmoke;
+    background: white;
     text-decoration: none;
     color: #444;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px #95AFBA;
     display: flex;
     flex-direction: column;
     min-height: 100%;
@@ -186,6 +266,8 @@
     background-position: top 60% center;
 }
 .card h1 {
+    font-family: "Roboto Slab";
+    font-weight: 600;
     font-size: 20px;
     margin: 0;
     color: #333;
@@ -204,7 +286,52 @@
     letter-spacing: .05em;
     margin: 2em 0 0 0;
 }
+.sideContainer {
+    display: grid;
+    grid-template-rows: 0.25fr 1fr 1fr 1fr 1fr 2fr;
+}
+.sideContainer > div > h1 {
+    text-align: center;
+}
+.sideContainer > div {
+    display: flex;
+    flex-direction: column;
+}
+h3 {
+    color: white;
+    background-color: #3F7CAC;
+    height: 30px;
+    width: 120px;
+    align-self: center;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 4px;
+}
+h6 {
+    padding-left: 20px;
+}
+.elCap, .multipitch, .trad {
+    margin-top: 12px;
+}
+.sport {
+    margin-top: -45px; 
+}
 .footer {
     grid-column: 2/3;
-    background-color: slategray;
+    background-color: rgba(149, 175, 186, 0.3);
+    display: grid;
+    justify-content: center;
+    box-shadow: 2px -2px 5px rgba(63, 124, 172, 0.5);
+    margin-top: 20px;
+}
+.container > p {
+    height: 35px;
+}
+.container > p > a > img {
+    position: relative;
+    top: 4px;
+    transition: transform .25s ease-in-out;
+}
+#git:hover {
+    transform: scale(1.15);
 }

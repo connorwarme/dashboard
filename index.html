@@ -7,40 +7,64 @@
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
     <script rel="javascript" src="dash.js" defer=""></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Raleway:wght@300;500;800&family=Roboto+Slab:wght@300;400;500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="main">
     <div class="sidebar">
         <div class="options">
-        <div class="dashboard">Dashboard</div>
+        <div class="dashboard">
+            <button class="dashboard btn"><img id="icon" src="icons/view-dashboard.svg">Dashboard</button>
+        </div>
         <div></div>
-        <div class="home">Home</div>
-        <div class="profile">Profile</div>
-        <div class="messages">Messages</div>
-        <div class="history">History</div>
-        <div class="tasks">Tasks</div>
-        <div class="communities">Communities</div>
+        <div class="home">
+            <button class="home btn"><img id="icon" src="icons/home-circle.svg">Home</button>
+        </div>
+        <div class="aboutMe">
+            <button class="about btn"><img id="icon" src="icons/account-circle.svg">About Me</button>
+        </div>
+        <div class="blog">
+            <button class="blog btn"><img id="icon" src="icons/book-open-page-variant.svg">Blog</button>
+        </div>
+        <div class="gallery">
+            <button class="gallery btn"><img id="icon" src="icons/camera-burst.svg">Gallery</button>
+        </div>
+        <div class="goals">
+            <button class="goals btn"><img id="icon" src="icons/image-filter-hdr.svg">Goals</button>
+        </div>
+        <div class="sponsors">
+            <button class="sponsors btn"><img id="icon" src="icons/handshake.svg">Sponsors</button>
+        </div>
+        <div class="contact">
+            <button class="contact btn"><img id="icon" src="icons/card-account-mail.svg">Contact Me</button>
+        </div>
         <div></div>
-        <div class="settings">Settings</div>
-        <div class="support">Support</div>
-        <div class="privacy">Privacy</div>
+        <div class="settings">
+            <button class="settings btn"><img id="icon" src="icons/cog.svg">Settings</button>
+        </div>
+        <div class="privacy">
+            <button class="privacy btn"><img id="icon" src="icons/account-lock.svg">Privacy</button>
+        </div>
         </div>
         <div class="empty"></div>
     </div>
     <div class="header">
         <div class="search">
-            <button class="searchbtn"><img src="icons/magnify.svg"></button>
-            <div class="searchBar"></div>
+            <button class="searchbtn"><img class="searchimg" src="icons/magnify.svg"></button>
+            <div class="searchBar">
+                <input type="search" id="search">
+            </div>
         </div>
         <div class="dashProfile">
-            <button class="alertsbtn"><img src="icons/bell-ring.svg"></button>
+            <button class="alertsbtn"><img class="alertsimg" src="icons/bell-ring.svg"></button>
             <div class="profilePic"></div>
             <div class="account">Amity Warme</div>
         </div>
         <div class="welcome">
             <div class="icon"></div>
             <div class="text">
-            <div class="hi">Hi there,</div>
             <div class="name">Amity Warme (@amity.warme)</div>
             </div>
         </div>
@@ -96,8 +120,8 @@
             <a href="https://himalilife.com/amity-warme.html" class="card">
                 <div class="thumb" style="background-image: url(images/team-4.jpg)"></div>
                 <article>
-                    <h1>Himali: Athlete Spotlight</h1>
-                    <span>Amity Warme</span>
+                    <h1>Himali Athlete: Amity Warme</h1>
+                    <span></span>
                     <p>Photo: Simon Carter</p>
                 </article>
             </a>
@@ -151,30 +175,85 @@
         </div>
     </div>
     <div class="sideContainer">
-        <div class="class">
-            <a href="" class="card">
-                <article>
-                    <h1>Achievements:</h1>
-                    <ul>
-                        <li>El Corazon, 5.13b 36 pitches</li>
-                        <li>Freerider in a Day, 5.13a 31 pitches, time: 18:15</li>
-                        <li>Golden Gate, 5.13a 33 pitches</li>
-                        <li>Mark of the Beast, 5.13b 6 pitches (first female ascent)</li>
-                        <li>Liberty Crack Free, 5.13b 12 pitches (first female ascent)</li>
-                    </ul>
-                    <ul>
-                        <li>Enter the Dragon, 5.13+ (first female ascent)</li>
-                        <li>Buffaloes in Space, 5.13c</li>
-                        <li>Learning to Fly, 5.13b</li>
-                        <li>Cosmic Debris, 5.13b</li>
-                        <li>Tricks are for Kids, 5.13</li>
-                    </ul>
-                </article>
-            </a>
+        <div class="achievements">
+            <h1>Achievements:</h1>
+        </div>
+        <div class="elCap">
+            <h3>El Capitan</h3>
+            <div class="corazon">
+                <h4>El Corazon</h4>
+                <h6>5.13b 32 pitches</h6>
+                <h6>Team free, ground up</h6>
+            </div>
+            <div class="FRIAD">
+                <h4>FRIAD (Freerider in a day)</h4>
+                <h6>5.13a 31 pitches</h6>
+                <h6>Team free, unstashed, unrehearsed, unsupported</h6>
+            </div>
+            <div class="gg">
+                <h4>Golden Gate</h4>
+                <h6>5.13a 36 pitches</h6>
+                <h6>Team free, ground up</h6>
+            </div>
+        </div>
+        <div class="multipitch">
+            <h3>Multipitch</h3>
+            <div class="beast">
+                <h4>Mark of the Beast</h4>
+                <h6>5.13b 6 pitches</h6>
+                <h6>First female ascent</h6> 
+            </div>
+            <div class="liberty">
+                <h4>Liberty Crack Free</h4>
+                <h6>5.13b 12 pitches</h6>
+            </div>
+            <div class="frontier">
+                <h4>Final Frontier</h4>
+                <h6>5.13a/b 9 pitches</h6>
+            </div>
+            <div class="nexus">
+                <h4>Nexus</h4>
+                <h6>5.13a/b 10 pitches</h6>
+            </div>
+        </div>
+        <div class="trad">
+            <h3>Trad</h3>
+            <div class="dragon">
+                <h5>Enter the Dragon, 5.13+</h5>
+                <h6>first female ascent</h6>
+            </div>
+            <div class="buffs">
+                <h5>Buffaloes in Space, 5.13c</h5>
+            </div>
+            <div class="cosmic">
+                <h5>Cosmic Debris, 5.13b</h5>
+            </div>
+            <div class="tricks">
+                <h5>Tricks are for Kids, 5.13</h5>
+            </div>
+        </div>
+        <div class="sport">
+            <h3>Sport</h3>
+            <div class="vesper">
+                <h5>Vesper, 5.13d/14a</h5>
+            </div>
+            <div class="millenium">
+                <h5>Third Millenium, 5.13d</h5>
+            </div>
+            <div class="raider">
+                <h5>Tombraider, 5.13d</h5>
+            </div>
+            <div class="burn">
+                <h5>Let it Burn, 5.13d</h5>
+            </div>
         </div>
     </div>
     </div>
-    <div class="footer">footer</div>
+    <div class="footer">
+        <div class="container">
+            <p><a href="https://github.com/connorwarme"><img id="git" src="icons/github.svg"></a> peregrinning productions 2022</p>
+        </div>
+    </div>
     </div>
 </body>
 </html>
